@@ -19,8 +19,7 @@ import { toast } from "react-toastify";
 import { sidebarStyles } from "../assets/dummyStyle";
 import questionsData from "../assets/dummydata";
 
-const API_BASE = "http://localhost:4000";
-
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 

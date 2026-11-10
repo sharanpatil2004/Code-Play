@@ -30,7 +30,9 @@ const Badge = ({ percent }) => {
 // MAIN COMPONENT
 // ===============================
 
-const MyResult = ({ apiBase = "http://localhost:4000" }) => {
+const MyResult = ({
+  apiBase = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000",
+}) => {
   const [results, setResults] = useState(null);
 
   const [loading, setLoading] = useState(true);

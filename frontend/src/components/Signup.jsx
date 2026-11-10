@@ -29,7 +29,7 @@ const Signup = ({ onSignupSuccess = null }) => {
   const [loading, setLoading] = useState(false);
 
   // API Base URL
-  const API_Base = "http://localhost:4000";
+  const API_Base = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
 
   // Email, name and password validation
   const validate = () => {
