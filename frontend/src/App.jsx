@@ -2,7 +2,7 @@ import React from "react";
 
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 
-import Home from "./pages/Home.jsx";
+import Home from "./pages/home.jsx";
 import Login from "./components/Login.jsx";
 import Signup from "./components/Signup.jsx";
 import MyResultPage from "./pages/MyResultPage.jsx";
