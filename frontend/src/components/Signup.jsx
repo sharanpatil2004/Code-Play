@@ -29,7 +29,9 @@ const Signup = ({ onSignupSuccess = null }) => {
   const [loading, setLoading] = useState(false);
 
   // API Base URL
-  const API_Base = import.meta.env.VITE_API_BASE_URL || "http://localhost:4000";
+  const API_BASE_URL = (
+    import.meta.env.VITE_API_BASE_URL || "http://localhost:4000"
+  ).replace(/\/+$/, "");
 
   // Email, name and password validation
   const validate = () => {
@@ -77,7 +79,7 @@ const Signup = ({ onSignupSuccess = null }) => {
         password,
       };
 
-      const resp = await fetch(`${API_Base}/api/auth/register`, {
+      const resp = await fetch(`${API_BASE_URL}/api/auth/register`, {
         method: "POST",
 
         headers: {
